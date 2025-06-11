@@ -1,0 +1,50 @@
+{
+  "info": {
+    "_postman_id": "iris-assignment-collection",
+    "name": "IRIS Assignment Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Tables",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:9090/list_tables",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["list_tables"]
+        }
+      }
+    },
+    {
+      "name": "Get Table Details",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:9090/get_table_details?table_name=Initial Investment",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["get_table_details"],
+          "query": [{"key": "table_name", "value": "Initial Investment"}]
+        }
+      }
+    },
+    {
+      "name": "Row Sum",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:9090/row_sum?table_name=Initial Investment&row_name=Tax Credit (if any )=",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["row_sum"],
+          "query": [
+            {"key": "table_name", "value": "Initial Investment"},
+            {"key": "row_name", "value": "Tax Credit (if any )="}
+          ]
+        }
+      }
+    }
+  ]
+}
